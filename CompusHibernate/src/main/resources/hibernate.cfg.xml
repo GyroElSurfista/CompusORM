@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>	
+   		<property name="connection.url">jdbc:postgresql://192.168.40.128/compusorm</property> <!-- BD Mane -->
+   		<property name="connection.driver_class">org.postgresql.Driver</property> <!-- DB Driver -->
+   		<property name="connection.username">tbd</property> <!-- DB User -->
+   		<property name="connection.password">tbd</property> <!-- DB Password -->
+   		
+   		<property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property> <!-- DB Dialect -->
+   		<property name="hbm2ddl.auto">update</property> <!-- create / create-drop / update -->
+                <!-- <property name="SQL">debug</property>-->
+		 
+		<!--<property name="show_sql">true</property>--> <!-- Show SQL in console -->
+		<!--<property name="format_sql">true</property>--> <!-- Show SQL formatted -->
+		
+		<mapping class="compush.compushibernate.seguridad.Funcion"/>
+		<mapping class="compush.compushibernate.seguridad.Funcion_IU"/>
+                <mapping class="compush.compushibernate.seguridad.IU"/>
+                <mapping class="compush.compushibernate.seguridad.Rol"/>
+                <mapping class="compush.compushibernate.seguridad.Rol_Funcion"/>
+                <mapping class="compush.compushibernate.seguridad.Sesion"/>
+                <mapping class="compush.compushibernate.seguridad.UserN"/>
+                <mapping class="compush.compushibernate.seguridad.UserN_Rol"/>
+                
+                <mapping class="compush.compushibernate.disp.Computadora"/>
+                <mapping class="compush.compushibernate.disp.Dispositivo"/>
+                <mapping class="compush.compushibernate.disp.Fotografia"/>
+                <mapping class="compush.compushibernate.disp.HistorialEstado"/>
+                <mapping class="compush.compushibernate.disp.Marca"/>
+                <mapping class="compush.compushibernate.disp.Periferico"/>
+                
+                <mapping class="compush.compushibernate.ops.Alquiler"/>
+                <mapping class="compush.compushibernate.ops.Prestamo"/>
+                
+                <mapping class="compush.compushibernate.reg.Bitacora"/>                
+	</session-factory>
+</hibernate-configuration>
+
+
+
+
